@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="ru">
+<head>
+
+<link rel="apple-touch-icon" sizes="57x57" href="apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+<link rel="manifest" href="manifest.json">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="ms-icon-144x144.png">
+<meta name="theme-color" content="#ffffff">
+
+	<meta charset="UTF-8">
+	<link rel="stylesheet" href="css/style.css" type="text/css">
+	<link href="https://fonts.googleapis.com/css?family=Cuprum" rel="stylesheet">
+	<a href="http://www.vgkuint.ru/"><left><img src="1.png" width="50" 
+   height="50" border="0" alt="Логотип"><h4 align="top"> ГБПОУ 'Волгоградский Колледж Управления 
+   и Новых Технологий имени 
+   Юрия Гагарина</h4></a></p>
+	<title>Главная</title>
+	<center><h1>Музейно-Библиотечный комплекс ГБПОУ "ВКУиНТ им.Ю. Гагарина"</h1>
+	
+</head>
+<body>
+<div class="slideshow-container">
+  <div class="mySlides fade"> 
+    <img src="1.jpg" style="width:90%">
+  </div>
+
+  <div class="mySlides fade">
+    <img src="2.jpg" style="width:90%" >    
+  </div>
+
+  <div class="mySlides fade">
+    <img src="3.jpg" style="width:90%" >
+  </div>
+  <br>
+<div style="text-align:center">
+  <span class="dot" onclick="currentSlide(1)"></span>
+  <span class="dot" onclick="currentSlide(2)"></span>
+  <span class="dot" onclick="currentSlide(3)"></span>
+</div>
+<script>
+var slideIndex = 0;
+showSlides();
+
+function showSlides() {
+    var i;
+    var slides = document.getElementsByClassName("mySlides");
+    var dots = document.getElementsByClassName("dot");
+    for (i = 0; i < slides.length; i++) {
+       slides[i].style.display = "none";  
+    }
+    slideIndex++;
+    if (slideIndex > slides.length) {slideIndex = 1}    
+    for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+    }
+    slides[slideIndex-1].style.display = "block";  
+    dots[slideIndex-1].className += " active";
+    setTimeout(showSlides, 5000);
+}
+</script>
+<header>
+	<nav class="dws-menu">
+		<ul>
+			<li><a href="Главная.html">Главная</a></li>
+			<li><a href="#">Библиотека</a>
+				<ul>
+					<li><a href="https://book.ru/">Книги</a>
+					<li><a href="О библиотеке.html">О библиотеке</a>
+					</li>
+					
+				</ul>
+			</li>
+			<li><a href="#">Музей</a>
+				<ul>
+					<li><a href="Экспонаты.html">Экспонаты</a></li>
+					<li><a href="О музее.html">О музее</a></li>
+				</ul>
+			</li>
+			<li><a href="http://www.vgkuint.ru/category/news/">Новости</a></li>
+		</ul>
+	</nav>
+</header>
+</body>
+</html>
